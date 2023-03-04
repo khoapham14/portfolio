@@ -1,0 +1,46 @@
+.portfolio-container{
+  background-image: url("../assets/hero_background.jpg");
+  background-color: #000;
+  height: auto;
+  width: auto;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  align-items: center;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.error-404-header{
+  width: 60%;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.error-404-desc{
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 5rem;
+}
+
+.error-404-button{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.error-404-button:hover{
+  background-color: #fff;
+  color: #000;
+}

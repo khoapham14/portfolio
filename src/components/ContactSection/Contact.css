@@ -1,0 +1,47 @@
+.contact {
+  height: 100vh;
+  width: auto;
+  max-width: 100vw;
+  display: grid;
+  color: #fff;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.contact-text-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%;
+  justify-items: center;
+}
+
+.contact-cta{
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  color: #A7A7A7;
+}
+
+.contact-header {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contact-subtext {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-details{
+  font-weight: 300;
+  width:100%;
+  color: #A7A7A7;
+}
+
