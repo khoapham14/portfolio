@@ -2,25 +2,34 @@
   overflow-y: auto;
   overflow-x: auto;
   white-space: nowrap;
-  position: sticky;
-  display:grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 100% 100% 100%;
-  column-gap: 10%;
+  position: sticky; 
 }
+
 
 .projects-carousel::-webkit-scrollbar {
   display: none;
 }
 
+.projects-card-container {
+  display:grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100% 100% 100%;
+}
+
 .project-card {
   width: auto;
-  height: auto;
+  height: 75vh;
   aspect-ratio: 16/9;
   margin-bottom: 2rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   -webkit-overflow-scrolling: touch;
+
+  /*   scroll-snap-align: start; */
+  overflow-y: hidden;
+  /*  backface visibility keeps font from looking weird  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* .project-card-overlay {
