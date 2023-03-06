@@ -45,11 +45,11 @@ body {
 }
 
 /* Media query for tablets */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 600px) and (max-width: 1024px) {
   body{
     font-size: 16px;
   }
-}
+} */
 
 h1 {
   font-size: 3.2em;
