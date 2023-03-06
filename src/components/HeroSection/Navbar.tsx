@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo_white.svg';
 import "./Navbar.css";
 import "../Global.css";
 

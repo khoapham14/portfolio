@@ -14,6 +14,9 @@ function Credits() {
         <div className="credits-subtext">
           <ul>
             <li>
+              Space background image from <strong>Wallpaper Cave</strong>
+            </li>
+            <li>
               Several generated images by <strong>DALL-E</strong>
             </li>
             <li>
