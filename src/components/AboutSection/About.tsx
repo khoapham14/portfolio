@@ -1,14 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { Routes, Route, Link } from "react-router-dom";
+import "../Global.css";
 import "./About.css";
 
 function About() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div className="about">
+      <div className="about hidden" id="about">
         <div className="about-header">About</div>
 
         <div className="experience-section">
@@ -71,7 +68,7 @@ function About() {
         </div>
       </div>
 
-      <div className="buzzwords">
+      <div className="buzzwords hidden">
         <div className="buzzwords-left">
           <div className="about-header">
             I AM NOT A ROCKSTAR DEVELOPER

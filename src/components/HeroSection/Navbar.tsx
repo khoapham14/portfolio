@@ -1,20 +1,26 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { Routes, Route, Link } from "react-router-dom";
 import Logo from '../../assets/logo.svg';
 import "./Navbar.css";
+import "../Global.css";
 
 function Navbar() {
-  const [count, setCount] = useState(0);
+
+  //Function to scroll to html element
+  function scrollToElement(element: string) {
+    const el = document.getElementById(element);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
-    <div className="navbar">
+    <div className="navbar hidden">
       <div className="logo-container"><img src={Logo} className="logo" /></div>
       <div className="nav-links-container">
-        <div>Projects</div>
-        <div>About</div>
-        <div>Contact</div>
-        <div>Credits</div>
+        <div onClick={() => scrollToElement("projects")}>Projects</div>
+        <div onClick={() => scrollToElement("about")}>About</div>
+        <div onClick={() => scrollToElement("contact")}>Contact</div>
+        <div onClick={() => scrollToElement("credits")}>Credits</div>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import "./Contact.css";
+import "../Global.css";
 
 function Contact() {
   return (
-    <div className="contact">
+    <div className="contact hidden" id="contact">
       <div className="contact-cta">
         Got a job for me?
         <div className="contact-header">Get in touch</div>

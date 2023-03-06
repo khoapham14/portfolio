@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
 import "./Hero.css";
+import "../Global.css";
 import MapMarker from "../../assets/map_marker.svg";
 
 // Function to scroll to a div
@@ -13,7 +14,7 @@ function scrollToElement(element: string) {
 
 function Hero() {
   return (
-    <div className="hero">
+    <div className="hero hidden">
       <Navbar />
       <div className="hero-text-container">
         <div className="hero-header">
@@ -23,8 +24,10 @@ function Hero() {
             ReactJS. Currently looking for the next step in my career.
           </div>
         </div>
+        <div className="circle-container show">
+          <div className="circle" />
+        </div>
 
-        <div></div>
         <button
           className="hero-button"
           onClick={() => scrollToElement("projects")}

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import "../Global.css";
 import "./Projects.css";
 import Nothing_Card from "../../assets/Nothing.png";
 import CT_Card from "../../assets/CubeTimer.png";
@@ -102,7 +103,8 @@ function Projects() {
     projectTitle: "NOTHING",
     projectType: "E-Commerce",
     projectTechStack: "ReactJS, Node.js, Express, MongoDB, Heroku, Stripe",
-    projectDescription: "A simple e-commerce website, made as a practice project.",
+    projectDescription:
+      "A simple e-commerce website, made as a practice project.",
   };
 
   const cubeTimerProps: ProjectOverlayProps = {
@@ -114,43 +116,43 @@ function Projects() {
 
   return (
     <div id="projects">
-      <div className="projects-header" >
-        Projects
-      </div>
-      <HorizontalSection>
-        {/* @ts-ignore */}
-        <TallOuterContainer dynamicHeight={dynamicHeight}>
-          <StickyInnerContainer ref={containerRef}>
-            {/* @ts-ignore */}
-            <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
-              <CardsContainer>
-                <div className="project-card-container">
-                  <ProjectOverlay {...sysdocCATProps} />
-                  <div
-                    className="project-card"
-                    style={{ backgroundImage: `url(${SysdocCat_Card})` }}
-                  />
-                </div>
-                <div className="project-card-container">
-                  <ProjectOverlay {...nothingProps} />
-                  <div
-                    className="project-card"
-                    style={{ backgroundImage: `url(${Nothing_Card})` }}
-                  />
-                </div>
+      <div className="projects-header hidden">Projects</div>
+      <div className="hidden">
+        <HorizontalSection>
+          {/* @ts-ignore */}
+          <TallOuterContainer dynamicHeight={dynamicHeight}>
+            <StickyInnerContainer ref={containerRef}>
+              {/* @ts-ignore */}
+              <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
+                <CardsContainer>
+                  <div className="project-card-container">
+                    <ProjectOverlay {...sysdocCATProps} />
+                    <div
+                      className="project-card"
+                      style={{ backgroundImage: `url(${SysdocCat_Card})` }}
+                    />
+                  </div>
+                  <div className="project-card-container">
+                    <ProjectOverlay {...nothingProps} />
+                    <div
+                      className="project-card"
+                      style={{ backgroundImage: `url(${Nothing_Card})` }}
+                    />
+                  </div>
 
-                <div className="project-card-container">
-                  <ProjectOverlay {...cubeTimerProps} />
-                  <div
-                    className="project-card"
-                    style={{ backgroundImage: `url(${CT_Card})` }}
-                  />
-                </div>
-              </CardsContainer>
-            </HorizontalTranslateContainer>
-          </StickyInnerContainer>
-        </TallOuterContainer>
-      </HorizontalSection>
+                  <div className="project-card-container">
+                    <ProjectOverlay {...cubeTimerProps} />
+                    <div
+                      className="project-card"
+                      style={{ backgroundImage: `url(${CT_Card})` }}
+                    />
+                  </div>
+                </CardsContainer>
+              </HorizontalTranslateContainer>
+            </StickyInnerContainer>
+          </TallOuterContainer>
+        </HorizontalSection>
+      </div>
     </div>
   );
 }

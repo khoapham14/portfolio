@@ -1,4 +1,4 @@
-import "./Pages.css";
+import "./Global.css";
 import {Link} from 'react-router-dom';
 
 function Error404Page() {
@@ -10,7 +10,7 @@ function Error404Page() {
           {" "}
           Uh oh! Looks like the page you're looking for doesn't exist. Click
           the button below to return to the main page. <br />
-          <Link to={"/"}><button className="error-404-button">Go back</button></Link>
+          <Link to={"/portfolio/"}><button className="error-404-button">Go back</button></Link>
         </div>
       </div>
     </div>

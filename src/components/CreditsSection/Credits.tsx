@@ -1,5 +1,5 @@
 import "./Credits.css";
-import MapMarker from "../../assets/map_marker.svg";
+import "../Global.css";
 
 // Function to scroll to top of page
 function scrollToTop() {
@@ -8,19 +8,18 @@ function scrollToTop() {
 
 function Credits() {
   return (
-    <div className="credits">
+    <div className="credits hidden" id="credits">
       <div className="credits-text-container">
         <div className="credits-header">Credits</div>
         <div className="credits-subtext">
           <ul>
-            <li>Space background from Wallpaper Cave</li>
             <li>
-              Inspired by various portfolios on Awwwards, mainly Peter Arendt,
-              Martin Briceno & Jean Mazouni
+              Inspired by various portfolios on <strong>Awwwards</strong>, especially <strong>Peter Arendt,
+              Martin Briceno & Jean Mazouni</strong>
             </li>
-            <li>Tutorials from DesignCourse and FullstackJunkie</li>
+            <li>Tutorials from <strong>Fireship, DesignCourse & FullstackJunkie</strong></li>
             <li>
-              Everybody I have worked with and learnt from at AUT and Sysdoc
+              Everybody I have worked with at <strong>AUT & Sysdoc</strong>
             </li>
           </ul>
         </div>

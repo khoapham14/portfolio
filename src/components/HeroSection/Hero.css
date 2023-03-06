@@ -8,6 +8,21 @@
   align-items: center;
 }
 
+.circle-container{
+  display:grid;
+}
+
+.circle{
+  background-color: #fff;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  position:fixed;
+}
+
 .hero-text-container {
   height: 80%;
   display: grid;
