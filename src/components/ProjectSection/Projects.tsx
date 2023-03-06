@@ -121,10 +121,8 @@ function Projects() {
         {/* @ts-ignore */}
         <TallOuterContainer dynamicHeight={dynamicHeight}>
           <StickyInnerContainer ref={containerRef}>
-            <HorizontalTranslateContainer
-              translateX={translateX}
-              ref={objectRef}
-            >
+            {/* @ts-ignore */}
+            <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
               <CardsContainer>
                 <div className="project-card-container">
                   <ProjectOverlay {...sysdocCATProps} />

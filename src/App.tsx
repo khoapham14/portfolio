@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Portfolio />} />
+        <Route path="/portfolio/" element={<Portfolio />} />
         <Route path="*" element={<Error404Page />} />
       </Routes>
     </Router>
