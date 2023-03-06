@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "../Global.css";
 import "./Projects.css";
-import Nothing_Card from "../../assets/Nothing.png";
+import Nothing_Card from "../../assets/Nothing_Old.png";
 import CT_Card from "../../assets/CubeTimer.png";
 import SysdocCat_Card from "../../assets/SysdocCAT.png";
 import styled from "styled-components";
@@ -125,14 +125,30 @@ function Projects() {
               {/* @ts-ignore */}
               <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
                 <CardsContainer>
-                  <div className="project-card-container">
+                  <div
+                    className="project-card-container"
+                    onClick={() =>
+                      window.open(
+                        "https://www.sysdoc.com/our-products/competency-assessment-tool",
+                        "_blank"
+                      )
+                    }
+                  >
                     <ProjectOverlay {...sysdocCATProps} />
                     <div
                       className="project-card"
                       style={{ backgroundImage: `url(${SysdocCat_Card})` }}
                     />
                   </div>
-                  <div className="project-card-container">
+                  <div
+                    className="project-card-container"
+                    onClick={() =>
+                      window.open(
+                        "https://shielded-inlet-26000.herokuapp.com/",
+                        "_blank"
+                      )
+                    }
+                  >
                     <ProjectOverlay {...nothingProps} />
                     <div
                       className="project-card"
@@ -140,7 +156,15 @@ function Projects() {
                     />
                   </div>
 
-                  <div className="project-card-container">
+                  <div
+                    className="project-card-container"
+                    onClick={() =>
+                      window.open(
+                        "https://khoapham14.github.io/simplict/",
+                        "_blank"
+                      )
+                    }
+                  >
                     <ProjectOverlay {...cubeTimerProps} />
                     <div
                       className="project-card"

@@ -6,7 +6,9 @@ function Contact() {
     <div className="contact hidden" id="contact">
       <div className="contact-cta">
         Got a job for me?
-        <div className="contact-header">Get in touch</div>
+        <div className="contact-header">
+          <a href="mailto:cody.pham14@gmail.com">Get in touch</a>
+        </div>
       </div>
 
       <div className="contact-text-container">

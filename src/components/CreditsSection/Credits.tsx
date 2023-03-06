@@ -14,6 +14,9 @@ function Credits() {
         <div className="credits-subtext">
           <ul>
             <li>
+              Several generated images by <strong>DALL-E</strong>
+            </li>
+            <li>
               Inspired by various portfolios on <strong>Awwwards</strong>, especially <strong>Peter Arendt,
               Martin Briceno & Jean Mazouni</strong>
             </li>

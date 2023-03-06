@@ -14,7 +14,7 @@ function scrollToElement(element: string) {
 
 function Hero() {
   return (
-    <div className="hero hidden">
+    <div className="hero">
       <Navbar />
       <div className="hero-text-container">
         <div className="hero-header">
@@ -24,7 +24,7 @@ function Hero() {
             ReactJS. Currently looking for the next step in my career.
           </div>
         </div>
-        <div className="circle-container show">
+        <div className="circle-container">
           <div className="circle" />
         </div>
 

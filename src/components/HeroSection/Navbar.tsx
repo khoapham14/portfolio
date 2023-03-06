@@ -14,7 +14,7 @@ function Navbar() {
   }
 
   return (
-    <div className="navbar hidden">
+    <div className="navbar">
       <div className="logo-container"><img src={Logo} className="logo" /></div>
       <div className="nav-links-container">
         <div onClick={() => scrollToElement("projects")}>Projects</div>
