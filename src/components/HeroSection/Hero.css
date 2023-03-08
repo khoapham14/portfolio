@@ -75,11 +75,11 @@
   width: 1.5rem;
 }
 
-@media screen and (max-width: 768px){
-  .hero {
+@media screen and (max-width: 1000px){
+  /* .hero {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
+  } */
 
   .circle{
     height: 5rem;

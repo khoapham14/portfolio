@@ -52,10 +52,24 @@
   text-align: right;
 }
 
-@media screen and (max-width: 768px){
-  .credits {
+@media screen and (max-width: 1000px){
+  /* .credits {
     margin-right: 1rem;
     margin-left: 1rem;
+  } */
+
+  .credits-subtext{
+    font-size: 1.2rem;
+  }
+  
+  .credits-end-text{
+    font-size: 2rem;
+  }
+
+  .credits-button{
+    font-size: 1rem;
+    height: auto;
+    padding: 0.5rem;
   }
 }
 

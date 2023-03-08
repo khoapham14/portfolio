@@ -7,6 +7,7 @@ import CT_Desktop from "../../assets/CubeTimer.png";
 import CT_Mobile from "../../assets/CubeTimer_Mobile.svg";
 import SysdocCat_Desktop from "../../assets/SysdocCAT.png";
 import SysdocCat_Mobile from "../../assets/SysdocCAT_Mobile.svg";
+import WeAreUs_Desktop from "../../assets/WeAreUs.png";
 import styled from "styled-components";
 import ProjectOverlay, { ProjectOverlayProps } from "./ProjectOverlay";
 
@@ -113,7 +114,7 @@ function Projects() {
   const nothingProps: ProjectOverlayProps = {
     projectTitle: "NOTHING",
     projectType: "E-Commerce",
-    projectTechStack: "ReactJS, Node.js, ExpressJS, MongoDB, Heroku, Stripe",
+    projectTechStack: "ReactJS, Node.js, ExpressJS, MongoDB, Heroku, Stripe, Firebase Auth",
     projectDescription:
       "A simple e-commerce website, made as a practice project.",
   };
@@ -122,6 +123,13 @@ function Projects() {
     projectTitle: "CUBE TIMER",
     projectType: "Web Application",
     projectTechStack: "ReactJS, Bootstrap, HTML, CSS",
+    projectDescription: "A web application for timing Rubik's Cube solves.",
+  };
+
+  const weAreUsProps: ProjectOverlayProps = {
+    projectTitle: "We Are Us MVP",
+    projectType: "Website",
+    projectTechStack: "ReactJS, Strapi, Stripe, MySQL, Nodejs",
     projectDescription: "A web application for timing Rubik's Cube solves.",
   };
 
@@ -186,6 +194,22 @@ function Projects() {
                         style={{ backgroundImage: `url(${CT_Desktop})` }}
                       />
                     </div>
+
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://github.com/LyleBranzuela/weareus-mvp-website",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...weAreUsProps} />
+                      <div
+                        className="project-card"
+                        style={{ backgroundImage: `url(${WeAreUs_Desktop})` }}
+                      />
+                    </div>
                   </CardsContainer>
                 </HorizontalTranslateContainer>
               </StickyInnerContainer>
@@ -199,15 +223,15 @@ function Projects() {
               {/* @ts-ignore */}
               <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
                 <CardsContainer>
-            <div
-              className="project-card-container"
-              onClick={() =>
-                window.open(
-                  "https://www.sysdoc.com/our-products/competency-assessment-tool",
-                  "_blank"
-                )
-              }
-            >
+                <div
+                  className="project-card-container"
+                  onClick={() =>
+                    window.open(
+                      "https://www.sysdoc.com/our-products/competency-assessment-tool",
+                      "_blank"
+                    )
+                  }
+                >
               <ProjectOverlay {...sysdocCATProps} />
               {windowWidth < 500 ? (
                 <div

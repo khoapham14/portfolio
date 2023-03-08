@@ -1,4 +1,5 @@
 #projects{
+  cursor: url('../../assets/Cursor_Projects.svg'), auto;
   margin-left: 7rem;
   margin-right: 7rem;
 }
@@ -79,11 +80,11 @@
   color: #fff;
 }
 
-@media screen and (max-width: 768px){
-  #projects{
+@media screen and (max-width: 1000px){
+  /* #projects{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-  }
+  } */
   .projects-header{
     margin-bottom: 3rem;
   }
@@ -93,7 +94,7 @@
   }
   
   .project-card {
-    width: 90vw;
+    width: 70vw;
     height: auto;
     margin-top: 2rem;
     aspect-ratio: 16/9;

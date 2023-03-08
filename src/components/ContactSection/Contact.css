@@ -46,9 +46,13 @@
   color: #C8C8C8;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1000px){
   .contact{
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+
+  .contact-subtext{
+    font-size: 1rem;
   }
 }

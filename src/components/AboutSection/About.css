@@ -93,6 +93,18 @@
   color: #C8C8C8;
 }
 
+@media screen and (max-width:1000px){
+  .about{
+    margin-left:5rem;
+    margin-right:5rem;
+  }
+  
+  .buzzwords{
+    margin-left:5rem;
+    margin-right:5rem;
+  }
+}
+
 @media screen and (max-width:768px){
   .about{
     margin-left:1rem;
@@ -101,6 +113,6 @@
   
   .buzzwords{
     margin-left:1rem;
+    margin-right:1rem;
   }
-
 }
