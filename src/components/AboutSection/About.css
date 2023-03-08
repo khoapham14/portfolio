@@ -1,14 +1,15 @@
 .about {
-  margin-top: 5%;
   height: 100vh;
   width: auto;
   max-width: 100vw;
   display: grid;
-  grid-template-rows: 10% 1fr 1fr;
+  grid-template-rows: 10% auto auto;
   row-gap: 1rem;
   color: #fff;
   position:relative;
   z-index:1;
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 .about-header {
@@ -70,6 +71,8 @@
   color: #fff;
   position:relative;
   z-index:1;
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 .buzzwords-left{
@@ -88,4 +91,16 @@
 .buzzwords-info{
   height: 100%;
   color: #C8C8C8;
+}
+
+@media screen and (max-width:768px){
+  .about{
+    margin-left:1rem;
+    margin-right:1rem;
+  }
+  
+  .buzzwords{
+    margin-left:1rem;
+  }
+
 }

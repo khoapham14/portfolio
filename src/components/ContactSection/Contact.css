@@ -7,7 +7,8 @@
   grid-template-rows: auto auto;
   align-items: center;
   justify-items: center;
-
+  margin-right: 7rem;
+  margin-left: 7rem;
 }
 
 .contact-text-container {
@@ -45,3 +46,9 @@
   color: #C8C8C8;
 }
 
+@media screen and (max-width:768px){
+  .contact{
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}

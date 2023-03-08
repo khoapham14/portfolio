@@ -7,6 +7,8 @@
   grid-template-rows: 10% auto;
   align-items: center;
   position:relative;
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 .circle-container{
@@ -71,4 +73,28 @@
 .map-marker{
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media screen and (max-width: 768px){
+  .hero {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .circle{
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .hero-text-container {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+
+  .location-container{
+    text-align: left;
+  }
 }

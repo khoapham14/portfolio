@@ -1,15 +1,19 @@
 import { useState, useRef, useEffect } from "react";
 import "../Global.css";
 import "./Projects.css";
-import Nothing_Card from "../../assets/Nothing_Old.png";
-import CT_Card from "../../assets/CubeTimer.png";
-import SysdocCat_Card from "../../assets/SysdocCAT.png";
+import Nothing_Desktop from "../../assets/Nothing_Old.png";
+import Nothing_Mobile from "../../assets/Nothing_Old_Mobile.svg";
+import CT_Desktop from "../../assets/CubeTimer.png";
+import CT_Mobile from "../../assets/CubeTimer_Mobile.svg";
+import SysdocCat_Desktop from "../../assets/SysdocCAT.png";
+import SysdocCat_Mobile from "../../assets/SysdocCAT_Mobile.svg";
 import styled from "styled-components";
 import ProjectOverlay, { ProjectOverlayProps } from "./ProjectOverlay";
 
 function Projects() {
   const [dynamicHeight, setDynamicHeight] = useState(null);
   const [translateX, setTranslateX] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const containerRef = useRef(null);
   const objectRef = useRef(null);
@@ -20,15 +24,9 @@ function Projects() {
     min-height: 100vh;
   `;
 
-  const BumperSection = styled.section`
-    text-align: center;
-    padding: 128px 16px;
-    background-color: #efefef;
-  `;
-
   const CardsContainer = styled.div`
     position: relative;
-    height: 100%;
+    height: auto;
     padding: 0 0 0 0;
     margin-right: 5rem;
     display: flex;
@@ -91,18 +89,31 @@ function Projects() {
     applyScrollListener(containerRef, setTranslateX);
   }, []);
 
+  //function to handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      console.log(windowWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowWidth]);
+
   const sysdocCATProps: ProjectOverlayProps = {
-    projectTitle: "COMPETENCY ASSESSMENT TOOL",
+    projectTitle: "SYSDOC CAT",
     projectType: "Web Application",
-    projectTechStack: "React, TypeScript, Node.js, Express, MongoDB",
+    projectTechStack:
+      "React, Typescript, Sharepoint, FluentUI, Chartjs, PowerBI",
     projectDescription:
-      "A Sharepoint-based tool for the assessment of competencies of employees in the company.",
+      "A tool for employees and managers to assess competencies.",
   };
 
   const nothingProps: ProjectOverlayProps = {
     projectTitle: "NOTHING",
     projectType: "E-Commerce",
-    projectTechStack: "ReactJS, Node.js, Express, MongoDB, Heroku, Stripe",
+    projectTechStack: "ReactJS, Node.js, ExpressJS, MongoDB, Heroku, Stripe",
     projectDescription:
       "A simple e-commerce website, made as a practice project.",
   };
@@ -118,64 +129,146 @@ function Projects() {
     <div id="projects">
       <div className="projects-header hidden">Projects</div>
       <div className="hidden">
-        <HorizontalSection>
+        {windowWidth > 768 ? (
+          <HorizontalSection>
+            {/* @ts-ignore */}
+            <TallOuterContainer dynamicHeight={dynamicHeight}>
+              <StickyInnerContainer ref={containerRef}>
+                {/* @ts-ignore */}
+                <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
+                  <CardsContainer>
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://www.sysdoc.com/our-products/competency-assessment-tool",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...sysdocCATProps} />
+                      <div
+                        className="project-card"
+                        style={{
+                          backgroundImage: `url(${SysdocCat_Desktop})`,
+                        }}
+                      />
+                    </div>
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://shielded-inlet-26000.herokuapp.com/",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...nothingProps} />
+
+                      <div
+                        className="project-card"
+                        style={{ backgroundImage: `url(${Nothing_Desktop})` }}
+                      />
+                    </div>
+
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://khoapham14.github.io/simplict/",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...cubeTimerProps} />
+                      <div
+                        className="project-card"
+                        style={{ backgroundImage: `url(${CT_Desktop})` }}
+                      />
+                    </div>
+                  </CardsContainer>
+                </HorizontalTranslateContainer>
+              </StickyInnerContainer>
+            </TallOuterContainer>
+          </HorizontalSection>
+        ) : (
+          <HorizontalSection>
           {/* @ts-ignore */}
           <TallOuterContainer dynamicHeight={dynamicHeight}>
             <StickyInnerContainer ref={containerRef}>
               {/* @ts-ignore */}
               <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
                 <CardsContainer>
-                  <div
-                    className="project-card-container"
-                    onClick={() =>
-                      window.open(
-                        "https://www.sysdoc.com/our-products/competency-assessment-tool",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <ProjectOverlay {...sysdocCATProps} />
-                    <div
-                      className="project-card"
-                      style={{ backgroundImage: `url(${SysdocCat_Card})` }}
-                    />
-                  </div>
-                  <div
-                    className="project-card-container"
-                    onClick={() =>
-                      window.open(
-                        "https://shielded-inlet-26000.herokuapp.com/",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <ProjectOverlay {...nothingProps} />
-                    <div
-                      className="project-card"
-                      style={{ backgroundImage: `url(${Nothing_Card})` }}
-                    />
-                  </div>
+            <div
+              className="project-card-container"
+              onClick={() =>
+                window.open(
+                  "https://www.sysdoc.com/our-products/competency-assessment-tool",
+                  "_blank"
+                )
+              }
+            >
+              <ProjectOverlay {...sysdocCATProps} />
+              {windowWidth < 500 ? (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${SysdocCat_Mobile})` }}
+                />
+              ) : (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${SysdocCat_Desktop})` }}
+                />
+              )}
+            </div>
+            <div
+              className="project-card-container"
+              onClick={() =>
+                window.open(
+                  "https://shielded-inlet-26000.herokuapp.com/",
+                  "_blank"
+                )
+              }
+            >
+              <ProjectOverlay {...nothingProps} />
+              {windowWidth < 500 ? (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${Nothing_Mobile})` }}
+                />
+              ) : (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${Nothing_Desktop})` }}
+                />
+              )}
+            </div>
 
-                  <div
-                    className="project-card-container"
-                    onClick={() =>
-                      window.open(
-                        "https://khoapham14.github.io/simplict/",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <ProjectOverlay {...cubeTimerProps} />
-                    <div
-                      className="project-card"
-                      style={{ backgroundImage: `url(${CT_Card})` }}
-                    />
-                  </div>
+            <div
+              className="project-card-container"
+              onClick={() =>
+                window.open("https://khoapham14.github.io/simplict/", "_blank")
+              }
+            >
+              <ProjectOverlay {...cubeTimerProps} />
+              {windowWidth < 500 ? (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${CT_Mobile})` }}
+                />
+              ) : (
+                <div
+                  className="project-card"
+                  style={{ backgroundImage: `url(${CT_Desktop})` }}
+                />
+              )}
+            </div>
                 </CardsContainer>
-              </HorizontalTranslateContainer>
-            </StickyInnerContainer>
-          </TallOuterContainer>
-        </HorizontalSection>
+                </HorizontalTranslateContainer>
+              </StickyInnerContainer>
+            </TallOuterContainer>
+          </HorizontalSection>
+        )}
       </div>
     </div>
   );

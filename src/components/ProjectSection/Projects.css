@@ -1,8 +1,6 @@
-.projects-carousel {
-  overflow-y: auto;
-  overflow-x: auto;
-  white-space: nowrap;
-  position: sticky;
+#projects{
+  margin-left: 7rem;
+  margin-right: 7rem;
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -79,4 +77,39 @@
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
+}
+
+@media screen and (max-width: 768px){
+  #projects{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .projects-header{
+    margin-bottom: 3rem;
+  }
+
+  .project-title{
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-card {
+    width: 90vw;
+    height: auto;
+    margin-top: 2rem;
+    aspect-ratio: 16/9;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    /* margin-right: 75px; */
+  }
+
+  .project-details-container{
+    display:grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 100%;
+    justify-items: start;
+    align-items: start;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+  }
 }

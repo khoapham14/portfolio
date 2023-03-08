@@ -9,10 +9,9 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: grid;
-  align-items: center;
-  padding-left: 7rem;
-  padding-right: 7rem;
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .error-404-header{
@@ -20,8 +19,7 @@
   font-size: 5rem;
   color: #fff;
   font-weight: 700;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin: 7rem;
 }
 
 .error-404-desc{
@@ -57,6 +55,25 @@
 @media(prefers-reduced-motion){
   .hidden{
     transition:none;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px){
+  .portfolio-container{
+    background-image: url("../assets/hero_background.jpg");
+    background-color: #000;
+    height: auto;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    align-items: center;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
   }
 }
 

@@ -6,6 +6,8 @@
   color: #fff;
   grid-template-rows: auto auto;
   align-items: center;
+  margin-right: 7rem;
+  margin-left: 7rem;
 }
 
 .credits-text-container {
@@ -48,5 +50,12 @@
   font-size: 3rem;
   font-weight: 700;
   text-align: right;
+}
+
+@media screen and (max-width: 768px){
+  .credits {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 }
 

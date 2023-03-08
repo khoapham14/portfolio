@@ -18,7 +18,7 @@ function About() {
 
             <div className="experience-info">
               <div>
-                <div className="experience-info-title">Things I did:</div>
+                <div className="experience-info-title">What I've worked on:</div>
                 <div className="experience-info-description">
                   Developed and deployed Sharepoint web applications using React
                   and Typescript for clients like{" "}
@@ -49,10 +49,10 @@ function About() {
             </div>
             <div className="experience-info">
               <div>
-                <div className="experience-info-title">Things I did:</div>
+                <div className="experience-info-title">What I've worked on:</div>
                 <div className="experience-info-description">
-                  Worked on a variety of projects using many different technologies.
-                  Projects were done either individually or in small teams of 3-5 students. <br /><br />
+                  Took on various roles, on a variety of projects using several different technologies.
+                  Projects were done either individually or in small teams of 3-5 students using Scrum. <br /><br />
                   Graduated with a Major in Software Development.
                 </div>
               </div>
@@ -88,9 +88,6 @@ function About() {
               like it when they get resolved. I approach problems one step at a
               time while maintaining communication with all stakeholders
               involved and give estimates or offer alternatives if possible.
-              <br />
-              <br />I will not hesitate to let people know when I do not know
-              something, and I will try my best to figure it out.
             </div>
           </div>
           <div className="buzzwords-info">
@@ -100,24 +97,14 @@ function About() {
               do something new. I tend to get the most motivated whenever I see
               someone who is highly-skilled at their craft as they inspire me to
               become like them.
-              <br />
-              <br />
-              When I do learn something, I try to set realistic expectations and
-              compare my progress only to my past self. This prevents me from
-              easily losing motivation or getting burnt out.
             </div>
           </div>
           <div className="buzzwords-info">
             <div className="experience-info-title">Adaptable</div>
             <div className="experience-info-description">
               Like most humans, I am not a fan of changing or going out of my
-              comfort zone. However, more often than not, I find myself capable
-              of adapting to the situation.
-              <br />
-              <br />
-              Projects at Sysdoc and AUT taught me how to adapt to various
-              needs, from picking up new technologies (e.g React, Sharepoint,
-              Flow, SAP), to learning basic designing and consulting skills.
+              comfort zone. Projects at Sysdoc and AUT taught me how to adapt to various
+              needs, from picking up new technologies to learning basic designing and consulting skills.
             </div>
           </div>
         </div>

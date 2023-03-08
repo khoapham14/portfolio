@@ -14,6 +14,9 @@ function Credits() {
         <div className="credits-subtext">
           <ul>
             <li>
+              Lots of cool front-end stuff from <strong>csstricks.com & codepen.io</strong>
+            </li>
+            <li>
               Space background image from <strong>Wallpaper Cave</strong>
             </li>
             <li>
