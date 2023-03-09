@@ -93,13 +93,13 @@
 
 @media screen and (max-width:1000px){
   .about{
-    margin-left:5rem;
-    margin-right:5rem;
+    margin-left:3rem;
+    margin-right:3rem;
   }
   
   .buzzwords{
-    margin-left:5rem;
-    margin-right:5rem;
+    margin-left:3rem;
+    margin-right:3rem;
   }
 }
 
@@ -149,6 +149,4 @@
     height: fit-content;
     margin-bottom: 1.5rem;
   }
-  
-
 }

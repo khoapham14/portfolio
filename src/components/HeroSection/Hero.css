@@ -83,10 +83,10 @@
 }
 
 @media screen and (max-width: 1000px){
-  /* .hero {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  } */
+  .hero {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 
   .circle{
     height: 5rem;
@@ -103,5 +103,12 @@
 
   .location-container{
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .hero{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }

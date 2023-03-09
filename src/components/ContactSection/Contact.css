@@ -48,11 +48,41 @@
 
 @media screen and (max-width:1000px){
   .contact{
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
   }
 
   .contact-subtext{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width:500px){
+  .contact{
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+
+  .contact-text-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    row-gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .contact-text-container > *:nth-child(2n){
+    text-align: right;
+  }
+
+  /* Alternating text alignment for children of contact-text-container */
+  .contact-text-container > *:nth-child(2n+1) {
+    text-align: left;
+  }
+
+  .contact-subtext{
+    font-size: 1.5rem;
+  }
+}
+
