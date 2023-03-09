@@ -24,7 +24,7 @@
 }
 
 .credits-subtext {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5rem, 2rem);
   font-weight: 300;
   color: #C8C8C8;
   text-align:left;
@@ -32,9 +32,9 @@
 
 .credits-button {
   border-radius: 5px;
-  height: 3.5rem;
+  height: auto;
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5rem, 2rem);
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -47,29 +47,14 @@
 }
 
 .credits-end-text{
-  font-size: 3rem;
+  font-size: clamp(2rem, 3rem, 4rem);
   font-weight: 700;
   text-align: right;
 }
 
 @media screen and (max-width: 1000px){
-  /* .credits {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  } */
-
-  .credits-subtext{
-    font-size: 1.2rem;
-  }
-  
-  .credits-end-text{
-    font-size: 2rem;
-  }
-
-  .credits-button{
-    font-size: 1rem;
-    height: auto;
-    padding: 0.5rem;
+  .credits-text-container{
+    grid-template-columns: 70%;
   }
 }
 
