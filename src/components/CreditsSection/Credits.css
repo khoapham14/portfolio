@@ -53,17 +53,17 @@
 }
 
 @media screen and (max-width: 1000px){
-  .credits{
+  /* .credits{
     margin-right: 3rem;
     margin-left: 3rem;
-  }
+  } */
 
   .credits-text-container{
     grid-template-columns: 70%;
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 768px){
   .credits{
     margin-right: 1.5rem;
     margin-left: 1.5rem;

@@ -92,7 +92,7 @@
 }
 
 @media screen and (max-width:1000px){
-  .about{
+  /* .about{
     margin-left:3rem;
     margin-right:3rem;
   }
@@ -100,10 +100,10 @@
   .buzzwords{
     margin-left:3rem;
     margin-right:3rem;
-  }
+  } */
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:768px){
   .about{
     margin-left:1.5rem;
     margin-right:1.5rem;

@@ -81,10 +81,10 @@
 }
 
 @media screen and (max-width: 1000px){
-  #projects{
+  /* #projects{
     margin-left: 3rem;
     margin-right: 3rem;
-  }
+  } */
   
   .projects-header{
     margin-bottom: 3rem;
@@ -117,7 +117,7 @@
 }
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 768px){
   #projects{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
