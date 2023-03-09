@@ -24,11 +24,11 @@ function Contact() {
           Email
           <div className="contact-details">cody.pham14@gmail.com</div>
         </div>
-        <div className="contact-subtext" onClick={() => openInNewTab("linkedin.com/in/khoa-pham-14nz")}>
+        <div className="contact-subtext" onClick={() => openInNewTab("https://www.linkedin.com/in/khoa-pham-14nz/")}>
           LinkedIn
           <div className="contact-details">linkedin.com/in/khoa-pham-14nz</div>
         </div>
-        <div className="contact-subtext" onClick={() => openInNewTab("github.com/khoapham14")}>
+        <div className="contact-subtext" onClick={() => openInNewTab("https://github.com/khoapham14")}>
           Github
           <div className="contact-details">github.com/khoapham14</div>
         </div>

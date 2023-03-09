@@ -28,6 +28,13 @@
   z-index: 1;
 }
 
+/* expand circle on hover */
+.circle:hover{
+  height: 8rem;
+  width: 8rem;
+  transition: 0.5s;
+}
+
 .hero-text-container {
   height: 80%;
   display: grid;
@@ -44,13 +51,13 @@
 .hero-subtext {
   font-size: 1.5rem;
   font-weight: 300;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 .location-container {
   font-size: 1.5rem;
   font-weight: 300;
-  color: #C8C8C8;
+  color: #989898;
   text-align: right;
 }
 

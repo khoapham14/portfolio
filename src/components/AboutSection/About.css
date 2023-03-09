@@ -7,7 +7,6 @@
   row-gap: 1rem;
   color: #fff;
   position:relative;
-  z-index:1;
   margin-left: 7rem;
   margin-right: 7rem;
 }
@@ -36,7 +35,7 @@
 .experience-subtitle {
   font-weight: 300;
   font-size: 1.5rem;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 .experience-info {
@@ -55,7 +54,7 @@
 .experience-info-description{
   font-size: 1rem;
   font-weight: 400;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 .buzzwords {
@@ -70,7 +69,6 @@
   column-gap: 2rem;
   color: #fff;
   position:relative;
-  z-index:1;
   margin-left: 7rem;
   margin-right: 7rem;
 }
@@ -90,7 +88,7 @@
 
 .buzzwords-info{
   height: 100%;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 @media screen and (max-width:1000px){

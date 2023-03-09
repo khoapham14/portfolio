@@ -64,7 +64,7 @@
 .project-details{
   font-weight: 700;
   font-size: 1rem;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 .project-details-text{
@@ -113,4 +113,40 @@
     row-gap: 1rem;
     margin-bottom: 1rem;
   }
+}
+
+
+@media screen and (max-width: 500px){
+  #projects{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .projects-header{
+    margin-bottom: 3rem;
+  }
+
+  .project-title{
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .project-card {
+    width: 65vw;
+    height: auto;
+    margin-top: 2rem;
+    aspect-ratio: 9/16;
+    position: relative;
+    /* margin-left: 2rem; */
+  }
+
+  /* .project-details-container{
+    display:grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 100%;
+    justify-items: start;
+    align-items: start;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+  } */
 }

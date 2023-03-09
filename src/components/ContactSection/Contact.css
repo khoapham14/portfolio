@@ -24,7 +24,7 @@
   font-weight: 300;
   width: 100%;
   text-align: center;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 .contact-header {
@@ -43,7 +43,7 @@
 .contact-details{
   font-weight: 300;
   width:100%;
-  color: #C8C8C8;
+  color: #989898;
 }
 
 @media screen and (max-width:1000px){
