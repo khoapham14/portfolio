@@ -95,10 +95,10 @@
   }
   
   .project-card {
-    width: 70vw;
+    width: 65vw;
     height: auto;
     margin-top: 2rem;
-    aspect-ratio: 16/9;
+    aspect-ratio: 14/10;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;

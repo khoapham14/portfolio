@@ -5,6 +5,8 @@ import Nothing_Desktop from "../../assets/Nothing_Old.png";
 import Nothing_Mobile from "../../assets/Nothing_Old_Mobile.svg";
 import CT_Desktop from "../../assets/CubeTimer.png";
 import CT_Mobile from "../../assets/CubeTimer_Mobile.svg";
+import Portfolio_Desktop from "../../assets/Portfolio.png";
+import Portfolio_Mobile from "../../assets/Portfolio_Mobile.png";
 import SysdocCat_Desktop from "../../assets/SysdocCAT.png";
 import SysdocCat_Mobile from "../../assets/SysdocCAT_Mobile.svg";
 import WeAreUs_Desktop from "../../assets/WeAreUs.png";
@@ -118,7 +120,7 @@ function Projects() {
     projectTechStack:
       "ReactJS, Node.js, ExpressJS, MongoDB, Heroku, Stripe, Firebase Auth",
     projectDescription:
-      "A simple e-commerce website, made as a practice project.",
+      "A simple practice project for learning fullstack development.",
   };
 
   const cubeTimerProps: ProjectOverlayProps = {
@@ -129,10 +131,17 @@ function Projects() {
   };
 
   const weAreUsProps: ProjectOverlayProps = {
-    projectTitle: "We Are Us MVP",
+    projectTitle: "WE ARE US",
     projectType: "Website",
     projectTechStack: "ReactJS, Strapi, Stripe, MySQL, Nodejs",
-    projectDescription: "A website for a New Zealand based startup.",
+    projectDescription: "An MVP website for a New Zealand based startup.",
+  };
+
+  const portfolioProps: ProjectOverlayProps = {
+    projectTitle: "PORTFOLIO",
+    projectType: "Website",
+    projectTechStack: "ReactJS, Vite, Typescript, Styled Components, HTML, CSS",
+    projectDescription: "My personal site showcasing my skills & projects.",
   };
 
   return (
@@ -210,6 +219,22 @@ function Projects() {
                       <div
                         className="project-card"
                         style={{ backgroundImage: `url(${WeAreUs_Desktop})` }}
+                      />
+                    </div>
+
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://github.com/khoapham14/portfolio/",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...portfolioProps} />
+                      <div
+                        className="project-card"
+                        style={{ backgroundImage: `url(${Portfolio_Desktop})` }}
                       />
                     </div>
                   </CardsContainer>
@@ -316,6 +341,29 @@ function Projects() {
                         <div
                           className="project-card"
                           style={{ backgroundImage: `url(${WeAreUs_Desktop})` }}
+                        />
+                      )}
+                    </div>
+
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open(
+                          "https://github.com/khoapham14/portfolio/",
+                          "_blank"
+                        )
+                      }
+                    >
+                      <ProjectOverlay {...portfolioProps} />
+                      {windowWidth < 500 ? (
+                        <div
+                          className="project-card"
+                          style={{ backgroundImage: `url(${Portfolio_Mobile})` }}
+                        />
+                      ) : (
+                        <div
+                          className="project-card"
+                          style={{ backgroundImage: `url(${Portfolio_Desktop})` }}
                         />
                       )}
                     </div>
