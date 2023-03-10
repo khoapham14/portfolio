@@ -31,7 +31,7 @@ function Projects() {
   const CardsContainer = styled.div`
     position: relative;
     height: auto;
-    padding: 0 0 0 0;
+    padding: 5rem 0 0 0;
     margin-right: 5rem;
     display: flex;
     flex-flow: row nowrap;
@@ -51,7 +51,7 @@ function Projects() {
     top: 0;
     height: 100vh;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
   `;
 
   const HorizontalTranslateContainer = styled.div.attrs(
@@ -260,7 +260,7 @@ function Projects() {
                       }
                     >
                       <ProjectOverlay {...sysdocCATProps} />
-                      {windowWidth < 500 ? (
+                      {windowWidth < 768 ? (
                         <div
                           className="project-card"
                           style={{
@@ -286,7 +286,7 @@ function Projects() {
                       }
                     >
                       <ProjectOverlay {...nothingProps} />
-                      {windowWidth < 500 ? (
+                      {windowWidth < 768 ? (
                         <div
                           className="project-card"
                           style={{ backgroundImage: `url(${Nothing_Mobile})` }}
@@ -309,7 +309,7 @@ function Projects() {
                       }
                     >
                       <ProjectOverlay {...cubeTimerProps} />
-                      {windowWidth < 500 ? (
+                      {windowWidth < 768 ? (
                         <div
                           className="project-card"
                           style={{ backgroundImage: `url(${CT_Mobile})` }}
@@ -332,7 +332,7 @@ function Projects() {
                       }
                     >
                       <ProjectOverlay {...weAreUsProps} />
-                      {windowWidth < 500 ? (
+                      {windowWidth < 768 ? (
                         <div
                           className="project-card"
                           style={{ backgroundImage: `url(${WeAreUs_Mobile})` }}
@@ -355,7 +355,7 @@ function Projects() {
                       }
                     >
                       <ProjectOverlay {...portfolioProps} />
-                      {windowWidth < 500 ? (
+                      {windowWidth < 768 ? (
                         <div
                           className="project-card"
                           style={{ backgroundImage: `url(${Portfolio_Mobile})` }}

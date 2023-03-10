@@ -116,6 +116,16 @@
   }
 }
 
+@media screen and (max-width: 767px){
+  .project-card {
+    width: 50vw;
+    height: auto;
+    margin-top: 2rem;
+    aspect-ratio: 9/16;
+    position: relative;
+    /* margin-left: 2rem; */
+  }
+}
 
 @media screen and (max-width: 500px){
   #projects{

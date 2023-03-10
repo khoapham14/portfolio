@@ -74,7 +74,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .credits {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
