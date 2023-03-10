@@ -24,10 +24,21 @@
 }
 
 .credits-subtext {
-  font-size: clamp(1rem, 1.5rem, 2rem);
+  display: block;
+  margin-left: 2rem;
   font-weight: 300;
+  text-align: left;
+}
+
+.credits-title {
+  color: #fff;
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  margin-top: 2rem;
+}
+
+.credits-desc {
   color: #989898;
-  text-align:left;
+  font-size: clamp(1rem, 1.5rem, 2rem);
 }
 
 .credits-button {
@@ -46,28 +57,26 @@
   color: #000;
 }
 
-.credits-end-text{
+.credits-end-text {
   font-size: clamp(2rem, 3rem, 4rem);
   font-weight: 700;
   text-align: right;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   /* .credits{
     margin-right: 3rem;
     margin-left: 3rem;
   } */
 
-  .credits-text-container{
+  .credits-text-container {
     grid-template-columns: 70%;
   }
 }
 
-@media screen and (max-width: 768px){
-  .credits{
+@media screen and (max-width: 768px) {
+  .credits {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
   }
-
 }
-

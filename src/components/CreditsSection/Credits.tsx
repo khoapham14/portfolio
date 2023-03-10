@@ -12,32 +12,44 @@ function Credits() {
       <div className="credits-text-container">
         <div className="credits-header">Credits</div>
         <div className="credits-subtext">
-          <ul>
-            <li>
-              Lots of cool front-end stuff from <strong>csstricks.com & codepen.io</strong>
-            </li>
-            <li>
-              Space background image from <strong>Wallpaper Cave</strong>
-            </li>
-            <li>
-              Several generated images by <strong>DALL-E</strong>
-            </li>
-            <li>
-              Inspired by various portfolios on <strong>Awwwards</strong>, especially <strong>Peter Arendt,
-              Martin Briceno & Jean Mazouni</strong>
-            </li>
-            <li>Tutorials from <strong>Fireship, DesignCourse & FullstackJunkie</strong></li>
-            <li>
-              Everybody I have worked with at <strong>AUT & Sysdoc</strong>
-            </li>
-          </ul>
+          <div className="credits-title">
+            <strong>csstricks & codepen </strong>
+            <div className="credits-desc">For cool CSS tricks and code snippets</div>
+          </div>
+
+          <div className="credits-title">
+            <strong>Wallpaper Flare</strong>
+            <div className="credits-desc">For the space background picture</div>
+          </div>
+
+          {/* <div className="credits-title">
+            <strong>DALL-E</strong>
+            <div className="credits-desc">For </div>
+          </div> */}
+
+          <div className="credits-title">
+            <strong>Awwwards</strong>
+            <div className="credits-desc">
+              For inspirational portfolios, especially Peter Arendt, Martin
+              Briceno & Jean Mazouni
+            </div>
+          </div>
+
+          <div className="credits-title">
+            <strong>
+              Fireship, Hyperplexed, DesignCourse & FullstackJunkie
+            </strong>
+            <div className="credits-desc">For their great tutorials on Youtube</div>
+          </div>
         </div>
       </div>
 
       <div className="credits-end-container">
         <div className="credits-end-text">
           Thank you for stopping by !<br />
-          <button className="credits-button" onClick={scrollToTop}>Back to top</button>
+          <button className="credits-button" onClick={scrollToTop}>
+            Back to top
+          </button>
         </div>
       </div>
     </div>
