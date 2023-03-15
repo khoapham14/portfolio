@@ -20,8 +20,6 @@ function Portfolio() {
     });
   });
 
-  const hiddenElements = document.querySelectorAll(".hidden");
-
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((element) => { observer.observe(element); });

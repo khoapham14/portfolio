@@ -77,7 +77,13 @@ button:focus-visible {
 /* Media query for extra small devices */
 @media (max-width: 500px) {
   html,body {
-    font-size: 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px){
+  html,body{
+    font-size: 8px;
   }
 }
 

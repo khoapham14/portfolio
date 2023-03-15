@@ -58,7 +58,7 @@
 }
 
 .credits-end-text {
-  font-size: clamp(2rem, 3rem, 4rem);
+  font-size: clamp(1.5rem, 3rem, 4rem);
   font-weight: 700;
   text-align: right;
 }
@@ -78,5 +78,21 @@
   .credits {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .credits{
+    display:block;
+    height: fit-content;
+  }
+  .credits-text-container {
+    display: block;
+    height: fit-content;
+    margin-bottom: 3rem;
+  }
+
+  .credits-end-text{
+    text-align:center;
   }
 }
