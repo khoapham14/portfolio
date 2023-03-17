@@ -15,25 +15,6 @@
   display:grid;
 }
 
-.circle{
-  background-color: #fff;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  display: grid;
-  justify-self: center;
-  align-self: center;
-  position:fixed;
-  mix-blend-mode: difference;
-  z-index: 1;
-}
-
-/* expand circle on hover */
-.circle:hover{
-  height: 8rem;
-  width: 8rem;
-  transition: 0.5s;
-}
 
 .hero-text-container {
   height: 80%;
@@ -87,11 +68,6 @@
     margin-left: 3rem;
     margin-right: 3rem;
   } */
-
-  .circle{
-    height: 5rem;
-    width: 5rem;
-  }
 
   .hero-text-container {
     height: 80%;

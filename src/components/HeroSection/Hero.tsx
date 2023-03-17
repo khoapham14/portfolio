@@ -25,9 +25,8 @@ function Hero() {
           </div>
         </div>
         <div className="circle-container">
-          <div className="circle" />
+          {/* <div className="circle" /> */}
         </div>
-
         <button
           className="hero-button"
           onClick={() => scrollToElement("projects")}

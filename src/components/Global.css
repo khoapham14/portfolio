@@ -52,6 +52,29 @@
   opacity: 1;
 }
 
+.circle{
+  background-color: #fff;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  position:fixed;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transform:translate3d(-50%,-50%,0);
+  transition:transform 0.4s ease-in-out;
+  pointer-events: none
+}
+
+/* expand circle on hover */
+/* .circle:hover{
+  height: 8rem;
+  width: 8rem;
+  transition: 0.5s;
+} */
+
 @media(prefers-reduced-motion){
   .hidden{
     transition:none;
