@@ -8,6 +8,7 @@
   align-items: center;
   margin-right: 7rem;
   margin-left: 7rem;
+  cursor: default;
 }
 
 .credits-text-container {

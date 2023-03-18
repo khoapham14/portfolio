@@ -9,6 +9,7 @@
   position:relative;
   margin-left: 7rem;
   margin-right: 7rem;
+  cursor: default;
 }
 
 .about-header {
@@ -71,6 +72,7 @@
   position:relative;
   margin-left: 7rem;
   margin-right: 7rem;
+  cursor: default;
 }
 
 .buzzwords-left{

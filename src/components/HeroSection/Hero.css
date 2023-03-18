@@ -9,6 +9,7 @@
   position:relative;
   margin-left: 7rem;
   margin-right: 7rem;
+  cursor: default;
 }
 
 .circle-container{

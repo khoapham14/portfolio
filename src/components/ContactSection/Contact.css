@@ -9,6 +9,7 @@
   justify-items: center;
   margin-right: 7rem;
   margin-left: 7rem;
+  cursor: pointer;
 }
 
 .contact-text-container {
