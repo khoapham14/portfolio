@@ -24,9 +24,7 @@ function Hero() {
             ReactJS. Currently looking for the next step in my career.
           </div>
         </div>
-        <div className="circle-container">
-          {/* <div className="circle" /> */}
-        </div>
+        <div className="circle-container"/>
         <button
           className="hero-button"
           onClick={() => scrollToElement("projects")}

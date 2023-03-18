@@ -19,7 +19,7 @@
 .hero-text-container {
   height: 80%;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 45% auto;
   grid-template-rows: auto auto;
   align-items: center;
 }
@@ -72,7 +72,7 @@
   .hero-text-container {
     height: 80%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% auto;
     grid-template-rows: auto auto;
     align-items: center;
   }
@@ -86,5 +86,9 @@
   .hero{
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+  }
+
+  .hero-text-container{
+    align-items: baseline;
   }
 }
