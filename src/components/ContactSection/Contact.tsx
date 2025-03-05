@@ -1,14 +1,31 @@
 import "./Contact.css";
 import "../Global.css";
-
+import ContactBlock, { ContactBlockProps } from "./ContactBlock";
+// Function to open URL in new window
+function openInNewTab(url: string) {
+  var win = window.open(url, "_blank");
+  win?.focus();
+}
 
 function Contact() {
-
-  // Function to open URL in new window
-  function openInNewTab(url: string) {
-    var win = window.open(url, "_blank");
-    win?.focus();
-  }
+  const contactDetails: ContactBlockProps[] = [
+    {
+      contactType: "Email",
+      contactInfo: "cody.pham14@gmail.com",
+      onContactClick: () => {},
+    },
+    {
+      contactType: "LinkedIn",
+      contactInfo: "linkedin.com/in/khoa-pham-14nz",
+      onContactClick: () =>
+        openInNewTab("https://www.linkedin.com/in/khoa-pham-14nz/"),
+    },
+    {
+      contactType: "GitHub",
+      contactInfo: "github.com/khoapham14",
+      onContactClick: () => openInNewTab("https://github.com/khoapham14"),
+    },
+  ];
 
   return (
     <div className="contact hidden" id="contact">
@@ -20,18 +37,10 @@ function Contact() {
       </div>
 
       <div className="contact-text-container">
-        <div className="contact-subtext">
-          Email
-          <div className="contact-details">cody.pham14@gmail.com</div>
-        </div>
-        <div className="contact-subtext" onClick={() => openInNewTab("https://www.linkedin.com/in/khoa-pham-14nz/")}>
-          LinkedIn
-          <div className="contact-details">linkedin.com/in/khoa-pham-14nz</div>
-        </div>
-        <div className="contact-subtext" onClick={() => openInNewTab("https://github.com/khoapham14")}>
-          Github
-          <div className="contact-details">github.com/khoapham14</div>
-        </div>
+        {contactDetails &&
+          contactDetails.map((x) => {
+            return <ContactBlock {...x} />;
+          })}
       </div>
     </div>
   );

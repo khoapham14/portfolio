@@ -16,24 +16,28 @@ function Hero() {
   return (
     <div className="hero">
       <Navbar />
-      <div className="hero-text-container">
-        <div className="hero-header">
-          Hi, I'm Khoa. <br /> Welcome to my website!
+      <div className="hero-container">
+        <div className="hero-text-container">
+          <div className="hero-greeting">Hi, I'm Khoa (or Cody).</div>
+          <div className="hero-header">Welcome to my website!</div>
           <div className="hero-subtext">
-            I’m a software developer specializing in frontend development with
-            ReactJS. Currently looking for the next step in my career.
+            I’m a Software Developer from Vietnam. Most recently an Intermediate
+            Fullstack Developer @ Compono Australia.
+          </div>
+          <div className="hero-misc">
+            <button
+              className="hero-button"
+              onClick={() => scrollToElement("projects")}
+            >
+              My Work
+            </button>
+            <div className="location-container">
+              <img src={MapMarker} className="map-marker" /> Auckland, New
+              Zealand
+            </div>
           </div>
         </div>
-        <div className="circle-container"/>
-        <button
-          className="hero-button"
-          onClick={() => scrollToElement("projects")}
-        >
-          View Projects
-        </button>
-        <div className="location-container">
-          <img src={MapMarker} className="map-marker" /> Auckland, New Zealand
-        </div>
+        <div className="circle" id="circle" />
       </div>
     </div>
   );

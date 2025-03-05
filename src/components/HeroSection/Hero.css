@@ -6,28 +6,63 @@
   color: #fff;
   grid-template-rows: 10% auto;
   align-items: center;
-  position:relative;
+  position: relative;
   margin-left: 7rem;
   margin-right: 7rem;
   cursor: default;
 }
 
-.circle-container{
+/* .hero-content-container{
   display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+} */
+
+.circle {
+  background-color: #fff;
+  height: 15rem;
+  width: 15rem;
+  max-width: 15rem;
+  border-radius: 50%;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  /* position: fixed; */
+  z-index: 1;
+  mix-blend-mode: difference;
+  transition: transform 0.4s ease-in-out;
+  pointer-events: none;
 }
 
-
-.hero-text-container {
+.hero-container {
   height: 80%;
   display: grid;
-  grid-template-columns: 45% auto;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  /* grid-template-rows: auto auto; */
+  grid-gap: 1rem;
   align-items: center;
+  justify-content: center;
+}
+
+.hero-misc{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+.hero-text-container {
+  justify-self: end;
 }
 
 .hero-header {
   font-size: 4rem;
   font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .hero-subtext {
@@ -36,11 +71,16 @@
   color: #989898;
 }
 
+.hero-greeting{
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+
 .location-container {
   font-size: 1.5rem;
   font-weight: 300;
   color: #989898;
-  text-align: right;
 }
 
 .hero-button {
@@ -59,37 +99,58 @@
   color: #000;
 }
 
-.map-marker{
+.map-marker {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 992px) {
   /* .hero {
     margin-left: 3rem;
     margin-right: 3rem;
   } */
 
-  .hero-text-container {
-    height: 80%;
-    display: grid;
+  .hero-container {
     grid-template-columns: 60% auto;
-    grid-template-rows: auto auto;
     align-items: center;
   }
 
-  .location-container{
+  .hero-misc{
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .location-container {
     text-align: left;
   }
 }
 
-@media screen and (max-width: 767px){
-  .hero{
+@media screen and (max-width: 767px) {
+  .hero {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 
-  .hero-text-container{
-    align-items: baseline;
+  .circle {
+    display: none;
+  }
+
+  .hero-misc{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-container{
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-misc{
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
   }
 }

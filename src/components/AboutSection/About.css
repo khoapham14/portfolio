@@ -2,7 +2,7 @@
   height: 100vh;
   width: auto;
   max-width: 100vw;
-  display: grid;
+  display: block;
   grid-template-rows: 10% auto auto;
   row-gap: 1rem;
   color: #fff;
@@ -112,6 +112,10 @@
     margin-bottom: 5rem;
     height: auto;
     display: block;
+  }
+
+  .experience-title{
+    font-size: 1.5rem;
   }
 
   .buzzwords{

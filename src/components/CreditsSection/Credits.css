@@ -1,5 +1,5 @@
 .credits {
-  height: 100vh;
+  min-height: 100vh;
   width: auto;
   max-width: 100vw;
   display: grid;
@@ -71,7 +71,7 @@
   } */
 
   .credits-text-container {
-    grid-template-columns: 70%;
+    grid-template-columns: 80%;
   }
 }
 
@@ -79,6 +79,10 @@
   .credits {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+  }
+
+  .credits-end-text{
+    margin-top: 2rem;
   }
 }
 

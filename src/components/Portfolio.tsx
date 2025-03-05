@@ -21,25 +21,20 @@ function Portfolio() {
   });
 
   //function to move circle to cursor position
-  const moveCircle = (e: MouseEvent) => {
-    const circle = document.getElementById("circle") as HTMLElement;
-    circle.style.left = e.clientX + "px";
-    circle.style.top = e.clientY + "px";
-  };
+  // const moveCircle = (e: MouseEvent) => {
+  //   const circle = document.getElementById("circle") as HTMLElement;
+  //   circle.style.left = e.clientX + "px";
+  //   circle.style.top = e.clientY + "px";
+  // };
 
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((element) => { observer.observe(element); });
-    document.addEventListener("mousemove", moveCircle);
-    return () => {
-      document.removeEventListener("mousemove", moveCircle);
-    };
   }, []);
 
 
   return (
     <div className="portfolio-container">
-      <div className="circle" id="circle" />
       <Hero />
       <Projects />
       <About />

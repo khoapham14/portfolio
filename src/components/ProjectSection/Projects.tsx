@@ -1,6 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 import "../Global.css";
 import "./Projects.css";
+import {
+  quayStProps,
+  sysdocCATProps,
+  nothingProps,
+  portfolioProps,
+  weAreUsProps,
+  cubeTimerProps,
+} from "./ProjectProps";
+import QuaySt_Desktop from "../../assets/QuaySt.png";
+import QuaySt_Mobile from "../../assets/QuaySt_Mobile.svg";
 import Nothing_Desktop from "../../assets/Nothing_Old.png";
 import Nothing_Mobile from "../../assets/Nothing_Old_Mobile.svg";
 import CT_Desktop from "../../assets/CubeTimer.png";
@@ -31,12 +41,16 @@ function Projects() {
   const CardsContainer = styled.div`
     position: relative;
     height: auto;
-    padding: 5rem 0 0 0;
     margin-right: 5rem;
+    padding: 2.5rem 0 0 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    @media screen and (max-width: 480px){
+      padding: 0 0 0 0;
+      margin-right: 10rem;
+    }
   `;
 
   const TallOuterContainer = styled.div.attrs(({ dynamicHeight }: any) => ({
@@ -105,45 +119,6 @@ function Projects() {
     };
   }, [windowWidth]);
 
-  const sysdocCATProps: ProjectOverlayProps = {
-    projectTitle: "SYSDOC CAT",
-    projectType: "Web Application",
-    projectTechStack:
-      "React, Typescript, Sharepoint, FluentUI, Chartjs, PowerBI",
-    projectDescription:
-      "A tool for employees and managers to assess competencies.",
-  };
-
-  const nothingProps: ProjectOverlayProps = {
-    projectTitle: "NOTHING",
-    projectType: "E-Commerce",
-    projectTechStack:
-      "ReactJS, Node.js, ExpressJS, MongoDB, Heroku, Stripe, Firebase Auth",
-    projectDescription:
-      "A simple practice project for learning fullstack development.",
-  };
-
-  const cubeTimerProps: ProjectOverlayProps = {
-    projectTitle: "CUBE TIMER",
-    projectType: "Web Application",
-    projectTechStack: "ReactJS, Bootstrap, HTML, CSS",
-    projectDescription: "A web application for timing Rubik's Cube solves.",
-  };
-
-  const weAreUsProps: ProjectOverlayProps = {
-    projectTitle: "WE ARE US",
-    projectType: "Website",
-    projectTechStack: "ReactJS, Strapi, Stripe, MySQL, Nodejs",
-    projectDescription: "An MVP website for a New Zealand based startup.",
-  };
-
-  const portfolioProps: ProjectOverlayProps = {
-    projectTitle: "PORTFOLIO",
-    projectType: "Website",
-    projectTechStack: "ReactJS, Vite, Typescript, Styled Components, HTML, CSS",
-    projectDescription: "My personal site showcasing my skills & projects.",
-  };
-
   return (
     <div id="projects">
       <div className="projects-header hidden">Projects</div>
@@ -154,8 +129,27 @@ function Projects() {
             <TallOuterContainer dynamicHeight={dynamicHeight}>
               <StickyInnerContainer ref={containerRef}>
                 {/* @ts-ignore */}
-                <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
+                <HorizontalTranslateContainer
+                  // @ts-ignore
+                  translateX={translateX}
+                  ref={objectRef}
+                >
                   <CardsContainer>
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open("https://quaystreet.com/", "_blank")
+                      }
+                    >
+                      <ProjectOverlay {...quayStProps} />
+                      <div
+                        className="project-card"
+                        style={{
+                          backgroundImage: `url(${QuaySt_Desktop})`,
+                        }}
+                      />
+                    </div>
+
                     <div
                       className="project-card-container"
                       onClick={() =>
@@ -173,6 +167,7 @@ function Projects() {
                         }}
                       />
                     </div>
+
                     <div
                       className="project-card-container"
                       onClick={() =>
@@ -248,8 +243,36 @@ function Projects() {
             <TallOuterContainer dynamicHeight={dynamicHeight}>
               <StickyInnerContainer ref={containerRef}>
                 {/* @ts-ignore */}
-                <HorizontalTranslateContainer translateX={translateX} ref={objectRef}>
+                <HorizontalTranslateContainer
+                  // @ts-ignore
+                  translateX={translateX as any}
+                  ref={objectRef}
+                >
                   <CardsContainer>
+                    <div
+                      className="project-card-container"
+                      onClick={() =>
+                        window.open("https://quaystreet.com/", "_blank")
+                      }
+                    >
+                      <ProjectOverlay {...quayStProps} />
+                      {windowWidth < 768 ? (
+                        <div
+                          className="project-card"
+                          style={{
+                            backgroundImage: `url(${QuaySt_Mobile})`,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className="project-card"
+                          style={{
+                            backgroundImage: `url(${QuaySt_Desktop})`,
+                          }}
+                        />
+                      )}
+                    </div>
+
                     <div
                       className="project-card-container"
                       onClick={() =>
@@ -358,12 +381,16 @@ function Projects() {
                       {windowWidth < 768 ? (
                         <div
                           className="project-card"
-                          style={{ backgroundImage: `url(${Portfolio_Mobile})` }}
+                          style={{
+                            backgroundImage: `url(${Portfolio_Mobile})`,
+                          }}
                         />
                       ) : (
                         <div
                           className="project-card"
-                          style={{ backgroundImage: `url(${Portfolio_Desktop})` }}
+                          style={{
+                            backgroundImage: `url(${Portfolio_Desktop})`,
+                          }}
                         />
                       )}
                     </div>
