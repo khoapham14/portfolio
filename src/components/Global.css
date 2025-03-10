@@ -54,8 +54,6 @@
 
 .circle {
   background-color: #fff;
-  height: 5rem;
-  width: 5rem;
   border-radius: 50%;
   display: grid;
   justify-self: center;
@@ -63,7 +61,7 @@
   z-index: 1;
   mix-blend-mode: difference;
   transform: translate3d(-50%, -50%, 0);
-  transition: transform 1s ease-in-out;
+  transition: height 0.5s ease, width 0.5s ease, transform 0.7s ease-in-out;
   pointer-events: none;
 }
 

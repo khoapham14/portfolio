@@ -39,26 +39,15 @@ function Portfolio() {
     hiddenElements.forEach((element) => {
       observer.observe(element);
     });
+    document.addEventListener("mousemove", moveCircle);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousemove", moveCircle);
     };
   }, []);
 
-  useEffect(() => {
-    console.log("Scroll Position: ", JSON.stringify(scrollPosition));
-    if (scrollPosition.y > 0) {
-      document.addEventListener("mousemove", moveCircle);
-    } else {
-      document.removeEventListener("mousemove", moveCircle);
-    }
-
-    return () => {
-      document.removeEventListener("mousemove", moveCircle);
-    };
-  }, [scrollPosition]);
-
-  return (
+ return (
     <div className="portfolio-container">
       <Hero scrollPos={scrollPosition.y} />
       <Projects />

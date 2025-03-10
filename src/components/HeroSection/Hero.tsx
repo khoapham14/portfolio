@@ -48,14 +48,14 @@ function Hero(props: HeroProps) {
             props.scrollPos && props.scrollPos > 0
               ? {
                   position: "fixed",
-                  height: "5rem",
-                  width: "5rem",
+                  height: "3.5rem",
+                  width: "3.5rem",
                 }
               : {
-                position: "static",
-                height: "8rem",
-                width: "8rem",
-              }
+                  position: "static",
+                  height: "10rem",
+                  width: "10rem",
+                }
           }
         />
       </div>
