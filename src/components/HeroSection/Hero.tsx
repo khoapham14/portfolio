@@ -4,6 +4,10 @@ import "./Hero.css";
 import "../Global.css";
 import MapMarker from "../../assets/map_marker.svg";
 
+export interface HeroProps {
+  scrollPos: number;
+}
+
 // Function to scroll to a div
 function scrollToElement(element: string) {
   const el = document.getElementById(element);
@@ -12,7 +16,7 @@ function scrollToElement(element: string) {
   }
 }
 
-function Hero() {
+function Hero(props: HeroProps) {
   return (
     <div className="hero">
       <Navbar />
@@ -37,7 +41,23 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className="circle" id="circle" />
+        <div
+          className="circle"
+          id="circle"
+          style={
+            props.scrollPos && props.scrollPos > 0
+              ? {
+                  position: "fixed",
+                  height: "5rem",
+                  width: "5rem",
+                }
+              : {
+                position: "static",
+                height: "8rem",
+                width: "8rem",
+              }
+          }
+        />
       </div>
     </div>
   );

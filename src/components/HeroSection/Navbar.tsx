@@ -27,7 +27,7 @@ function Navbar() {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      console.log(windowWidth);
+      // console.log(windowWidth);
     };
     window.addEventListener("resize", handleResize);
     return () => {

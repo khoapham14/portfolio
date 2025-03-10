@@ -18,22 +18,6 @@
   grid-template-rows: auto auto;
 } */
 
-.circle {
-  background-color: #fff;
-  height: 15rem;
-  width: 15rem;
-  max-width: 15rem;
-  border-radius: 50%;
-  display: grid;
-  align-self: center;
-  justify-self: center;
-  /* position: fixed; */
-  z-index: 1;
-  mix-blend-mode: difference;
-  transition: transform 0.4s ease-in-out;
-  pointer-events: none;
-}
-
 .hero-container {
   height: 80%;
   display: grid;
@@ -129,10 +113,6 @@
   .hero {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-  }
-
-  .circle {
-    display: none;
   }
 
   .hero-misc{
