@@ -20,6 +20,7 @@
 .experience-section {
   border-top: 1px solid #fff;
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: grid;
   width: 100%;
   height: fit-content;
