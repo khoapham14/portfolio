@@ -9,3 +9,9 @@ React, Javascript/Typescript, HTML, CSS, Styled Components, Vite.
 1. Clone repo
 2. Run 'npm install' to get required packages.
 3. Run 'npm run dev' to serve to local host.
+
+
+## Deployment
+1. Commit & push changes
+2. Run 'npm run build' to generate production build.
+3. Run 'npm run deploy' to deploy to github pages.
