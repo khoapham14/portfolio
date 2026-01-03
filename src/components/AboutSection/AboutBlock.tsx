@@ -4,7 +4,7 @@ export interface AboutBlockProps {
   duration: string;
   company: string;
   jobTitle: string;
-  description: string;
+  description?: string;
   techStack: string;
 }
 
@@ -38,14 +38,16 @@ function AboutBlock({ duration, company, jobTitle, description, techStack }: Abo
 
         {/* Description */}
         <div className="space-y-6">
-          <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest mb-2">
-              What I've worked on
-            </h4>
-            <p className="font-body text-base leading-relaxed text-muted-foreground max-w-prose">
-              {description}
-            </p>
-          </div>
+          {description && (
+            <div>
+              <h4 className="font-mono text-xs uppercase tracking-widest mb-2">
+                What I've worked on
+              </h4>
+              <p className="font-body text-base leading-relaxed text-muted-foreground max-w-prose">
+                {description}
+              </p>
+            </div>
+          )}
 
           <div>
             <h4 className="font-mono text-xs uppercase tracking-widest mb-3">

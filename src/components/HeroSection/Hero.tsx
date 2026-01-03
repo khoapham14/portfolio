@@ -39,7 +39,7 @@ function Hero() {
 
               {/* Subtitle */}
               <p className="font-body text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-                I'm a software developer from Vietnam living in New Zealand.
+                I'm a JavaScript developer from Vietnam living in New Zealand.
                 Currently a Software Engineer @ ArchiPro NZ.
               </p>
 

@@ -59,10 +59,10 @@ function Credits() {
           </div>
 
           {/* Footer */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-background/20">
-            {/* Copyright */}
-            <p className="font-mono text-sm text-background/60">
-              © {new Date().getFullYear()} Khoa Pham. All rights reserved.
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8">
+            {/* Closing Message */}
+            <p className="font-display text-2xl md:text-3xl italic text-background/60">
+              Have a great day!
             </p>
 
             {/* Back to Top */}
@@ -78,13 +78,6 @@ function Credits() {
             >
               Back to Top ↑
             </button>
-          </div>
-
-          {/* Closing Message */}
-          <div className="text-center mt-16">
-            <p className="font-display text-2xl md:text-3xl italic text-background/60">
-              Have a great day!
-            </p>
           </div>
         </div>
       </div>

@@ -2,6 +2,13 @@ import { AboutBlockProps } from "./AboutBlock";
 
 export const workHistory: AboutBlockProps[] = [
   {
+    duration: "2025 - Present",
+    company: "ArchiPro NZ",
+    jobTitle: "Software Engineer",
+    techStack:
+      "GraphQL - React - Remix - TailwindCSS - PHP - SilverStripe CMS - PostgreSQL - AWS",
+  },
+  {
     duration: "2024 - 2025",
     company: "Compono Australia",
     jobTitle: "Intermdediate Fullstack Developer",
