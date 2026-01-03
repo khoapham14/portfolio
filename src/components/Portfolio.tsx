@@ -1,55 +1,18 @@
-import { useState, useEffect } from "react";
-import "./Global.css";
-import Hero from "./HeroSection/Hero";
-import Projects from "./ProjectSection/Projects";
-import About from "./AboutSection/About";
-import Contact from "./ContactSection/Contact";
-import Credits from "./CreditsSection/Credits";
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import Hero from './HeroSection/Hero';
+import Projects from './ProjectSection/Projects';
+import About from './AboutSection/About';
+import Contact from './ContactSection/Contact';
+import Credits from './CreditsSection/Credits';
 
 function Portfolio() {
-  const [scrollPosition, setScrollPosition] = useState({ x: 0, y: 0 });
+  // Set up intersection observer for fade-in animations
+  useIntersectionObserver('.fade-in', { threshold: 0.1, once: true });
 
-  const handleScroll = () => {
-    setScrollPosition({
-      x: window.scrollX,
-      y: window.scrollY,
-    });
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  });
-
-  // function to move circle to cursor position
-  const moveCircle = (e: MouseEvent) => {
-    const circle = document.getElementById("circle") as HTMLElement;
-    circle.style.left = e.clientX + "px";
-    circle.style.top = e.clientY + "px";
-  };
-
-  useEffect(() => {
-    const hiddenElements = document.querySelectorAll(".hidden");
-    hiddenElements.forEach((element) => {
-      observer.observe(element);
-    });
-    document.addEventListener("mousemove", moveCircle);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousemove", moveCircle);
-    };
-  }, []);
-
- return (
-    <div className="portfolio-container">
-      <Hero scrollPos={scrollPosition.y} />
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Main Sections */}
+      <Hero />
       <Projects />
       <About />
       <Contact />

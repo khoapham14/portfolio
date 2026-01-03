@@ -1,69 +1,125 @@
-import { useState, useEffect } from "react";
-import Logo from "../../assets/logo_white.svg";
-import Hamburger from "../../assets/hamburger_menu.svg";
-import "./Navbar.css";
-import "../Global.css";
+import { useState, useEffect } from 'react';
+import { cn } from '../../lib/utils';
 
 function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  //Function to scroll to html element
-  function scrollToElement(element: string) {
+  const scrollToElement = (element: string) => {
     const el = document.getElementById(element);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      el.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+    setMobileMenuOpen(false);
+  };
 
-  function openNav() {
-    document.getElementById("mobileNav")!.style.height = "100%";
-  }
-
-  function closeNav() {
-    document.getElementById("mobileNav")!.style.height = "0%";
-  }
-
-  //function to handle window resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      // console.log(windowWidth);
+      if (window.innerWidth > 1000) {
+        setMobileMenuOpen(false);
+      }
     };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [windowWidth]);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const navLinks = [
+    { id: 'projects', label: 'Projects' },
+    { id: 'about', label: 'About' },
+    { id: 'contact', label: 'Contact' },
+    { id: 'credits', label: 'Credits' },
+  ];
 
   return (
-    <div className="navbar">
-      <div className="logo-container">
-        <img src={Logo} className="logo" />
-      </div>
-      {windowWidth > 1000 ? (
-        <div className="nav-links-container">
-          <div className="nav-link" onClick={() => scrollToElement("projects")}>Projects</div>
-          <div className="nav-link" onClick={() => scrollToElement("about")}>About</div>
-          <div className="nav-link" onClick={() => scrollToElement("contact")}>Contact</div>
-          <div className="nav-link" onClick={() => scrollToElement("credits")}>Credits</div>
-        </div>
-      ) : (
-        <>
-          <div className="hamburger" onClick={openNav}>
-            <img src={Hamburger} className="hamburger-icon" />
+    <nav className="sticky top-0 z-40 bg-background border-b-2 border-foreground">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <a
+          href="#"
+          className="font-display text-2xl font-bold tracking-tight hover:text-foreground"
+          aria-label="Home"
+        >
+          KP
+        </a>
+
+        {/* Desktop Navigation */}
+        {windowWidth > 1000 ? (
+          <div className="flex gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToElement(link.id)}
+                className={cn(
+                  'font-mono text-sm uppercase tracking-widest',
+                  'text-foreground bg-transparent border-none',
+                  'hover:underline underline-offset-4',
+                  'transition-all duration-100',
+                  'focus-visible:outline-none focus-visible:underline'
+                )}
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
-          <div className="mobileNav" id="mobileNav">
-            <div className="close-btn" onClick={closeNav}>X</div>
-            <div className="nav-links-container">
-              <div className="nav-link" onClick={() => {scrollToElement("projects"); closeNav();}}>Projects</div>
-              <div className="nav-link" onClick={() => {scrollToElement("about"); closeNav();}}>About</div>
-              <div className="nav-link" onClick={() => {scrollToElement("contact"); closeNav();}}>Contact</div>
-              <div className="nav-link" onClick={() => {scrollToElement("credits"); closeNav();}}>Credits</div>
+        ) : (
+          /* Mobile Hamburger */
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="p-2 bg-transparent border-none"
+            aria-label="Open menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <div className="space-y-1.5">
+              <div className="w-6 h-0.5 bg-foreground" />
+              <div className="w-6 h-0.5 bg-foreground" />
+              <div className="w-6 h-0.5 bg-foreground" />
             </div>
-          </div>
-        </>
-      )}
-    </div>
+          </button>
+        )}
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={cn(
+          'fixed inset-0 z-50 bg-foreground text-background',
+          'flex flex-col items-center justify-center',
+          'transition-all duration-300',
+          mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        )}
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setMobileMenuOpen(false)}
+          className={cn(
+            'absolute top-6 right-6',
+            'font-mono text-2xl text-background bg-transparent border-none',
+            'hover:opacity-70 transition-opacity'
+          )}
+          aria-label="Close menu"
+        >
+          X
+        </button>
+
+        {/* Mobile Nav Links */}
+        <div className="flex flex-col items-center gap-8">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToElement(link.id)}
+              className={cn(
+                'font-display text-4xl font-bold',
+                'text-background bg-transparent border-none',
+                'hover:underline underline-offset-8',
+                'transition-all duration-100'
+              )}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 }
 

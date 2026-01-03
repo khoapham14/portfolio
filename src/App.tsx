@@ -1,7 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
 import Error404Page from "./components/Error404Page";
-import "./App.css";
 
 function App() {
 
